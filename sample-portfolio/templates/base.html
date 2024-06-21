@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} - Delos Reyes | Portfolio</title>
+    <style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #b8b7b7;
+        color: #333; 
+        overflow-y: auto; 
+    }
+
+    header {
+        background-color: #4d4b4c;
+        padding: 20px;
+        text-align: center;
+        color: white;
+    }
+
+    nav {
+        background-color: #615e5f; 
+        padding: 10px 0;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 0 15px; 
+        transition: background-color 0.3s ease; 
+        display: inline-block; 
+    }
+
+    nav a:hover {
+        background-color: #808080; 
+    }
+
+    .container {
+        max-width: 700px; 
+        margin: 20px auto; 
+        padding: 0 20px; 
+        box-sizing: border-box;
+    }
+
+    .section {
+        background-color: rgba(255, 255, 255, 0.5); 
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    }
+
+    h1 {
+        color: white;
+    }
+
+    h2 {
+        color: rgb(88, 88, 88);
+    }
+
+    .highlight-name {
+        font-size: 2em;
+        font-weight: bold;
+        color: rgb(85, 84, 84); 
+        text-shadow: 2px 2px #acaaaa; 
+        margin-left: 30px; 
+    }
+
+    .title {
+        font-size: 1.5em;
+        font-style: italic;
+        color: #696768; 
+        text-align: center;
+        margin-top: 0.3em;
+        margin-right: 20px;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover; 
+        border: 2px solid gray; 
+        margin-left: 20px; 
+        transition: transform 0.3s ease;
+    }
+
+    .profile-image:hover {
+        transform: scale(1.50);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    }
+
+    .home-content {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .home-text {
+        flex-grow: 1;
+    }
+
+    .project-image {
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        transition: transform 0.3s ease; 
+    }
+
+    .project-image:hover {
+        transform: scale(1.70);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            max-width: 100%; 
+            padding: 0 10px; 
+        }
+
+        nav a {
+            padding: 0 10px; 
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+        }
+
+        .highlight-name {
+            font-size: 1.5em; 
+            margin-left: 20px; 
+        }
+
+        .title {
+            font-size: 1.2em; 
+            margin-right: 10px; 
+        }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/projects">Projects</a>
+        <a href="/skills">Skills</a>
+        <a href="/contact">Contact</a>
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
